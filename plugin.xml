@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Licensed to the Apache Software Foundation (ASF) under one
+  or more contributor license agreements.  See the NOTICE file
+  distributed with this work for additional information
+  regarding copyright ownership.  The ASF licenses this file
+  to you under the Apache License, Version 2.0 (the
+  "License"); you may not use this file except in compliance
+  with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing,
+  software distributed under the License is distributed on an
+  "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+  KIND, either express or implied.  See the License for the
+  specific language governing permissions and limitations
+  under the License.
+-->
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:rim="http://www.blackberry.com/ns/widgets"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="cordova-plugin-tzimagepicker"
+    version="1.0.0">
+    <name>TZImagePicker</name>
+    <description>Cordova Image Picker Plugin</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,tzimagepicker</keywords>
+
+    <js-module src="www/TZImagePickerPlugin.js" name="TZImagePicker">
+        <clobbers target="TZImagePicker" />
+    </js-module>
+
+    <!-- ios -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="TZImagePicker">
+                <param name="ios-package" value="TZImagePickerPlugin"/>
+            </feature>
+        </config-file>
+
+        <header-file src="src/ios/HUDManager.h" />
+        <source-file src="src/ios/HUDManager.m" />
+
+        <header-file src="src/ios/TZImagePickerPlugin.h" />
+        <source-file src="src/ios/TZImagePickerPlugin.m" />
+
+        <header-file src="src/ios/MicAssistant.h" />
+        <source-file src="src/ios/MicAssistant.m" />
+
+        <header-file src="src/ios/MBProgressHUD/MBProgressHUD.h" />
+        <source-file src="src/ios/MBProgressHUD/MBProgressHUD.m" />
+
+        <header-file src="src/ios/TZImagePickerController/LxGridViewFlowLayout.h" />
+        <source-file src="src/ios/TZImagePickerController/LxGridViewFlowLayout.m" />
+
+        <header-file src="src/ios/TZImagePickerController/TZTestCell.h" />
+        <source-file src="src/ios/TZImagePickerController/TZTestCell.m" />
+
+        <header-file src="src/ios/TZImagePickerController/ViewController.h" />
+        <source-file src="src/ios/TZImagePickerController/ViewController.m" />
+
+        <header-file src="src/ios/TZImagePickerController/TZImagePickerController/NSBundle+TZImagePicker.h" />
+        <source-file src="src/ios/TZImagePickerController/TZImagePickerController/NSBundle+TZImagePicker.m" />
+
+        <header-file src="src/ios/TZImagePickerController/TZImagePickerController/TZAssetCell.h" />
+        <source-file src="src/ios/TZImagePickerController/TZImagePickerController/TZAssetCell.m" />
+
+        <header-file src="src/ios/TZImagePickerController/TZImagePickerController/TZAssetModel.h" />
+        <source-file src="src/ios/TZImagePickerController/TZImagePickerController/TZAssetModel.m" />
+
+        <header-file src="src/ios/TZImagePickerController/TZImagePickerController/TZGifPhotoPreviewController.h" />
+        <source-file src="src/ios/TZImagePickerController/TZImagePickerController/TZGifPhotoPreviewController.m" />
+
+        <header-file src="src/ios/TZImagePickerController/TZImagePickerController/TZImageCropManager.h" />
+        <source-file src="src/ios/TZImagePickerController/TZImagePickerController/TZImageCropManager.m" />
+
+        <header-file src="src/ios/TZImagePickerController/TZImagePickerController/TZImageManager.h" />
+        <source-file src="src/ios/TZImagePickerController/TZImagePickerController/TZImageManager.m" />
+
+        <header-file src="src/ios/TZImagePickerController/TZImagePickerController/TZImagePickerController.h" />
+        <source-file src="src/ios/TZImagePickerController/TZImagePickerController/TZImagePickerController.m" />
+
+        <header-file src="src/ios/TZImagePickerController/TZImagePickerController/TZPhotoPickerController.h" />
+        <source-file src="src/ios/TZImagePickerController/TZImagePickerController/TZPhotoPickerController.m" />
+
+        <header-file src="src/ios/TZImagePickerController/TZImagePickerController/TZPhotoPreviewCell.h" />
+        <source-file src="src/ios/TZImagePickerController/TZImagePickerController/TZPhotoPreviewCell.m" />
+
+        <header-file src="src/ios/TZImagePickerController/TZImagePickerController/TZPhotoPreviewController.h" />
+        <source-file src="src/ios/TZImagePickerController/TZImagePickerController/TZPhotoPreviewController.m" />
+
+        <header-file src="src/ios/TZImagePickerController/TZImagePickerController/TZProgressView.h" />
+        <source-file src="src/ios/TZImagePickerController/TZImagePickerController/TZProgressView.m" />
+
+        <header-file src="src/ios/TZImagePickerController/TZImagePickerController/TZVideoPlayerController.h" />
+        <source-file src="src/ios/TZImagePickerController/TZImagePickerController/TZVideoPlayerController.m" />
+
+        <header-file src="src/ios/TZImagePickerController/TZImagePickerController/UIView+Layout.h" />
+        <source-file src="src/ios/TZImagePickerController/TZImagePickerController/UIView+Layout.m" />
+
+        <resource-file src="src/ios/TZImagePickerController/TZImagePickerController/TZImagePickerController.bundle" />
+		
+        <framework src="CoreGraphics.framework" />
+        <framework src="Foundation.framework" />
+        <framework src="AVFoundation.framework" />
+		<framework src="AssetsLibrary.framework" />
+        <framework src="AddressBook.framework" />
+        <framework src="Photos.framework" />
+        <framework src="UIKit.framework" />
+        <framework src="ImageIO.framework" />
+        <framework src="MediaPlayer.framework" />
+        <framework src="QuartzCore.framework" />
+		
+        <preference name="CAMERA_USAGE_DESCRIPTION" default=" " />
+        <config-file target="*-Info.plist" parent="NSCameraUsageDescription">
+            <string>$CAMERA_USAGE_DESCRIPTION</string>
+        </config-file>
+
+        <preference name="MICROPHONE_USAGE_DESCRIPTION" default=" " />
+        <config-file target="*-Info.plist" parent="NSMicrophoneUsageDescription">
+            <string>$MICROPHONE_USAGE_DESCRIPTION</string>
+        </config-file>
+
+        <preference name="PHOTOLIBRARY_USAGE_DESCRIPTION" default=" " />
+        <config-file target="*-Info.plist" parent="NSPhotoLibraryUsageDescription">
+            <string>$PHOTOLIBRARY_USAGE_DESCRIPTION</string>
+        </config-file>
+    </platform>
+
+</plugin>

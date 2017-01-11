@@ -1,0 +1,35 @@
+{
+  "name": "cordova-plugin-tzimagepicker",
+  "version": "1.0.0",
+  "description": "Cordova TZImagePicker Plugin",
+  "cordova": {
+    "id": "cordova-plugin-tzimagepicker",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/magnww/cordova-plugin-tzimagepicker.git"
+  },
+  "keywords": [
+    "cordova",
+    "tzimagepicker"
+  ],
+  "scripts": {
+    "test": "npm run jshint",
+    "jshint": "node node_modules/jshint/bin/jshint www && node node_modules/jshint/bin/jshint src && node node_modules/jshint/bin/jshint tests"
+  },
+  "author": "gefan",
+  "license": "MIT",
+  "engines": {
+    "cordovaDependencies": {
+      "2.0.0": {
+        "cordova": ">100"
+      }
+    }
+  },
+  "devDependencies": {
+    "jshint": "^2.6.0"
+  }
+}
