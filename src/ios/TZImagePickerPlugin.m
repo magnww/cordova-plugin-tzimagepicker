@@ -106,7 +106,7 @@
     NSString* filename = [NSString stringWithFormat:@"%f",[date timeIntervalSinceReferenceDate]];
     int i = 0;
     for (UIImage *image in photos) {
-        filePath = [NSString stringWithFormat:@"%@/%@%@%04d.%@", NSTemporaryDirectory(), @"cdv_photo_",filename , i++, @"jpg"];
+        filePath = [NSString stringWithFormat:@"%@%@%@%04d.%@", NSTemporaryDirectory(), @"cdv_photo_",filename , i++, @"jpg"];
         
         @autoreleasepool {
             data = UIImageJPEGRepresentation(image,0.5);
